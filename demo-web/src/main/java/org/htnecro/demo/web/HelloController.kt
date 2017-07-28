@@ -12,6 +12,6 @@ class HelloController {
 
     @RequestMapping("/hello")
     fun say(): String {
-        return "Hello SpringBoot!"
+        return "Hello Spring Boot!"
     }
 }
