@@ -1,4 +1,4 @@
-package org.htnecro.demo.enum
+package org.htnecro.demo.constant
 
 /**
  * @author Haitao.Wu (HTNecro@gmail.com)
