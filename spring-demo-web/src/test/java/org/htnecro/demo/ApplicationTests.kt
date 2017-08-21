@@ -1,16 +1,18 @@
 package org.htnecro.demo
 
-import org.junit.Test
-import org.junit.runner.RunWith
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit4.SpringRunner
+import org.htnecro.demo.mapper.OrderMapper
+import org.testng.annotations.Test
+import javax.annotation.Resource
 
-@RunWith(SpringRunner::class)
-@SpringBootTest
-class ApplicationTests {
+
+class ApplicationTests : AbstractTest() {
+
+	@Resource
+	private lateinit var orderMapper : OrderMapper
 
 	@Test
 	fun contextLoads() {
+        println(orderMapper)
 	}
 
 }

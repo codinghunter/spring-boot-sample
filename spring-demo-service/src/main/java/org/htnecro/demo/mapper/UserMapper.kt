@@ -9,6 +9,8 @@ import org.htnecro.demo.meta.User
 @Mapper
 interface UserMapper {
 
+    fun insert(user: User)
+
     fun findById(id: Long): User
 
     fun listAll(): List<User>

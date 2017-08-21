@@ -27,7 +27,7 @@ class IntValueEnumTypeHandler<E : Enum<E>>(type: Class<E>?) : BaseTypeHandler<E>
     }
 
     @Throws(SQLException::class)
-    override fun setNonNullParameter(ps: PreparedStatement, i: Int, parameter: E, jdbcType: JdbcType) {
+    override fun setNonNullParameter(ps: PreparedStatement, i: Int, parameter: E?, jdbcType: JdbcType?) {
         val valuedEnum = parameter as IntValueEnum
         ps.setInt(i, valuedEnum.intValue())
     }

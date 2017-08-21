@@ -9,6 +9,8 @@ import org.htnecro.demo.meta.Order
 @Mapper
 interface OrderMapper {
 
+    fun insert(order: Order)
+
     fun findById(id: Long): Order
 
     fun listByUserId(userId: Long): List<Order>
