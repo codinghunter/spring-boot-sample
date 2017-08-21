@@ -1,6 +1,7 @@
 spring:
   datasource:
     url: jdbc:h2:mem:test;MODE=MySQL
+    driver-class-name: org.h2.Driver
 
     druid:
       initial-size: 10
@@ -15,13 +16,14 @@ spring:
       test-on-return: false
       filters: stat,wall,log4j2
 
+
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
 mybatis:
   type-aliases-package: org.htnecro.demo.meta
-  mapper-locations: org.htnecro.demo.mapper
+  mapper-locations: classpath*:mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
     default-enum-type-handler: org.htnecro.demo.typehandler.IntValueEnumTypeHandler
