@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.htnecro.demo.mapper.UserMapper">
 
-    <insert id="insert" parameterType="User">
+    <insert id="insert" parameterType="User" keyProperty="id" useGeneratedKeys="true">
         INSERT INTO `user` (`name`, `is_available`, `create_time`, `update_time`)
         VALUES
 	    (#{name}, #{available}, NOW(), NOW())
     </insert>
     
     <select id="findById" resultType="User">
-        SELECT * from `user` where `id` = # {id}
+        SELECT * from `user` where `id` = #{id}
     </select>
 
     <select id="listAll" resultType="User">

@@ -3,6 +3,7 @@ package org.htnecro.demo.mapper
 import org.htnecro.demo.AbstractTest
 import org.htnecro.demo.constant.OrderStatus
 import org.htnecro.demo.meta.Order
+import org.testng.Assert
 import org.testng.annotations.Test
 import java.util.*
 import javax.annotation.Resource
@@ -23,16 +24,10 @@ class OrderMapperTest : AbstractTest() {
         order.orderTime = Calendar.getInstance().time
         order.status = OrderStatus.NEW
         orderMapper.insert(order)
-    }
 
-    @Test
-    fun findById() {
-
-    }
-
-    @Test
-    fun findAll() {
-
+        val exist = orderMapper.findById(order.id!!)
+        Assert.assertNotNull(exist)
+        Assert.assertEquals(exist.orderNo, "201708210001")
     }
 
 }
