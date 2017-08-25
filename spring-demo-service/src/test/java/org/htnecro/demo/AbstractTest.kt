@@ -7,6 +7,5 @@ import org.springframework.test.context.testng.AbstractTransactionalTestNGSpring
 /**
  * @author Haitao.Wu (HTNecro@gmail.com)
  */
-@SpringBootTest(classes = arrayOf(IntegrationTest::class))
-@ActiveProfiles("integration-test")
+@SpringBootTest(classes = arrayOf(TestConfiguration::class))
 class AbstractTest : AbstractTransactionalTestNGSpringContextTests()

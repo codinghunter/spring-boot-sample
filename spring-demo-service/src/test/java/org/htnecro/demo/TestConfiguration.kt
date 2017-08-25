@@ -8,4 +8,4 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
  */
 @EnableTransactionManagement
 @SpringBootApplication
-class IntegrationTest
+class TestConfiguration

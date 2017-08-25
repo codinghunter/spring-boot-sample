@@ -15,7 +15,6 @@
         <module>spring-demo-common</module>
         <module>spring-demo-service</module>
         <module>spring-demo-web</module>
-        <module>integration-test</module>
     </modules>
 
     <properties>
@@ -46,12 +45,6 @@
                 <artifactId>spring-demo-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.htnecro.demo</groupId>
-                <artifactId>integration-test</artifactId>
-                <version>${project.version}</version>
-                <scope>test</scope>
-            </dependency>
 
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -63,6 +56,13 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>1.1.2</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.11</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
