@@ -10,7 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import javax.annotation.Resource
 
 @EnableAsync
-@EnableTransactionManagement
 @SpringBootApplication
 class Application : WebMvcConfigurerAdapter() {
 
