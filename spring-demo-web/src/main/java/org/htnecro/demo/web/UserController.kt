@@ -4,10 +4,7 @@ import org.htnecro.demo.mapper.OrderMapper
 import org.htnecro.demo.mapper.UserMapper
 import org.htnecro.demo.meta.Order
 import org.htnecro.demo.meta.User
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import javax.annotation.Resource
 
 /**
@@ -23,12 +20,12 @@ class UserController {
     @Resource
     private lateinit var orderMapper: OrderMapper
 
-    @RequestMapping(method = arrayOf(RequestMethod.GET))
+    @GetMapping
     fun list(): List<User> {
         return userMapper.listAll()
     }
     
-    @RequestMapping("/{userId}/orders", method = arrayOf(RequestMethod.GET))
+    @GetMapping("/{userId}/orders")
     fun listOrder(@PathVariable userId: Long): List<Order> {
         return orderMapper.listByUserId(userId)
     }
