@@ -6,6 +6,5 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
 /**
  * @author Haitao.Wu (HTNecro@gmail.com)
  */
-@EnableTransactionManagement
 @SpringBootApplication
 class TestConfiguration

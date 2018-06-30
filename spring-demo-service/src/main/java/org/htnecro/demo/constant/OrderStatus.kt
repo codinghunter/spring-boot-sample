@@ -15,7 +15,6 @@ enum class OrderStatus(
     PICKING_COMPLETE(300, "拣货"),
     PACKAGING_COMPLETE(400, "打包"),
     WEIGHING_COMPLETE(500, "称重"),
-    PALLETIZING_COMPLETE(600, "出库"),
     CANCELED(999, "取消");
 
     override fun intValue(): Int {

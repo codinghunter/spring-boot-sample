@@ -6,23 +6,10 @@ spring:
     password: hello1234
     driver-class-name: com.mysql.jdbc.Driver
 
-    druid:
-      initial-size: 10
-      max-active: 20
-      min-idle: 10
-      max-wait: 60000
-      time-between-eviction-runs-millis: 3000
-      min-evictable-idle-time-millis: 300000
-      validation-query: SELECT 'x' FROM DUAL
-      test-while-idle: true
-      test-on-borrow: false
-      test-on-return: false
-      filters: stat,wall,log4j2
-
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-  http:
+  servlet:
     multipart:
       enabled: true
       max-file-size: 10MB

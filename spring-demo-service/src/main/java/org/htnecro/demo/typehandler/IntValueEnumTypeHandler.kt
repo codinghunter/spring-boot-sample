@@ -22,7 +22,7 @@ class IntValueEnumTypeHandler<E : Enum<E>>(type: Class<E>?) : BaseTypeHandler<E>
         val enums = type.enumConstants ?: throw IllegalArgumentException(type.simpleName + " does not represent an enum type.")
         for (e in enums) {
             val intValueEnum = e as IntValueEnum
-            map.put(intValueEnum.intValue(), e)
+            map[intValueEnum.intValue()] = e
         }
     }
 
