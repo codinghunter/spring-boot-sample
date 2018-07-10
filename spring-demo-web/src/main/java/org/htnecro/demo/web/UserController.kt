@@ -4,8 +4,11 @@ import org.htnecro.demo.mapper.OrderMapper
 import org.htnecro.demo.mapper.UserMapper
 import org.htnecro.demo.meta.Order
 import org.htnecro.demo.meta.User
-import org.springframework.web.bind.annotation.*
-import javax.annotation.Resource
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+import javax.inject.Inject
 
 /**
  * @author Haitao.Wu (HTNecro@gmail.com)
@@ -14,10 +17,10 @@ import javax.annotation.Resource
 @RequestMapping("/users")
 class UserController {
 
-    @Resource
+    @Inject
     private lateinit var userMapper: UserMapper
 
-    @Resource
+    @Inject
     private lateinit var orderMapper: OrderMapper
 
     @GetMapping

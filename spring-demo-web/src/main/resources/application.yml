@@ -2,7 +2,7 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/spring-boot-demo?useSSL=false
-    username: root
+    username: kotliner
     password: hello1234
     driver-class-name: com.mysql.jdbc.Driver
 

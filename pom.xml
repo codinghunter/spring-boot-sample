@@ -21,7 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <kotlin.version>1.2.50</kotlin.version>
+        <kotlin.version>1.2.51</kotlin.version>
         <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
     </properties>
 
@@ -61,6 +61,11 @@
                 <artifactId>kotlin-reflect</artifactId>
                 <version>${kotlin.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-kotlin</artifactId>
+                <version>2.9.6</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -71,6 +76,11 @@
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
                 <version>6.14.3</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>1</version>
             </dependency>
 
         </dependencies>
@@ -98,6 +108,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
         </dependency>
 
         <dependency>
