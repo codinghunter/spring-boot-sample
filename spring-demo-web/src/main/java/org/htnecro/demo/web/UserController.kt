@@ -1,9 +1,8 @@
 package org.htnecro.demo.web
 
-import org.htnecro.demo.mapper.OrderMapper
-import org.htnecro.demo.mapper.UserMapper
 import org.htnecro.demo.meta.Order
 import org.htnecro.demo.meta.User
+import org.htnecro.demo.service.UserOrderService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -18,19 +17,16 @@ import javax.inject.Inject
 class UserController {
 
     @Inject
-    private lateinit var userMapper: UserMapper
-
-    @Inject
-    private lateinit var orderMapper: OrderMapper
+    private lateinit var userOrderService: UserOrderService
 
     @GetMapping
     fun list(): List<User> {
-        return userMapper.listAll()
+        return userOrderService.listAllUser()
     }
-    
+
     @GetMapping("/{userId}/orders")
     fun listOrder(@PathVariable userId: Long): List<Order> {
-        return orderMapper.listByUserId(userId)
+        return userOrderService.listOrderByUser(userId)
     }
 
 }

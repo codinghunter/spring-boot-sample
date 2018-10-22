@@ -46,6 +46,7 @@ public class WebConfiguration {
                     .httpBasic();
         }
 
+        @SuppressWarnings("deprecation")
         @Bean
         public UserDetailsService userDetailsService() {
             User.UserBuilder users = User.withDefaultPasswordEncoder();
