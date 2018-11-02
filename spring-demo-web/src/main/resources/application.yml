@@ -4,7 +4,6 @@ spring:
     url: jdbc:mysql://localhost:3306/spring-boot-demo?useSSL=false
     username: kotliner
     password: hello1234
-    driver-class-name: com.mysql.jdbc.Driver
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
