@@ -12,6 +12,7 @@
     <description>Kotlin Spring Boot Demo</description>
 
     <modules>
+        <module>spring-demo-test</module>
         <module>spring-demo-common</module>
         <module>spring-demo-service</module>
         <module>spring-demo-web</module>
