@@ -7,13 +7,14 @@ import org.testng.Assert
 import org.testng.annotations.Test
 import java.util.*
 import javax.annotation.Resource
+import javax.inject.Inject
 
 /**
  * @author Haitao.Wu (HTNecro@gmail.com)
  */
 class OrderMapperTest : AbstractTest() {
 
-    @Resource
+    @Inject
     private lateinit var orderMapper: OrderMapper
 
     @Test

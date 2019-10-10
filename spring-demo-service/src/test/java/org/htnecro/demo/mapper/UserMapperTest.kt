@@ -5,21 +5,21 @@ import org.htnecro.demo.meta.User
 import org.testng.Assert
 import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Test
-import javax.annotation.Resource
+import javax.inject.Inject
 
 /**
  * @author Haitao.Wu (HTNecro@gmail.com)
  */
 class UserMapperTest : AbstractTest() {
 
-    @Resource
+    @Inject
     private lateinit var userMapper: UserMapper
 
     @BeforeMethod
     fun init(){
         val user = User()
         user.name = "测试"
-        user.available = true
+        user.isAvailable = true
         userMapper.insert(user)
     }
 
@@ -27,12 +27,13 @@ class UserMapperTest : AbstractTest() {
     fun insert() {
         val user = User()
         user.name = "测试1"
-        user.available = true
+        user.isAvailable = true
         userMapper.insert(user)
 
         val exist = userMapper.findById(user.id!!)
         Assert.assertNotNull(exist)
         Assert.assertEquals(exist.name, "测试1")
+        Assert.assertEquals(exist.isAvailable, true)
     }
 
     @Test

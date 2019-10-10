@@ -8,7 +8,7 @@ import java.util.*
 class User {
     var id: Long? = null
     var name: String? = null
-    var available: Boolean? = null
+    var isAvailable: Boolean? = null
     var createTime: Date? = null
     var updateTime: Date? = null
 }
